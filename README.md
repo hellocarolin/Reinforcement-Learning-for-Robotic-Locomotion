@@ -6,6 +6,9 @@ In the progress of finding a suitable Reinforcement Learning method a the quadru
 
 For the complex quadruped robot the Deep Deterministic Policy Gradient is chosen to solve the problem. It is implemented using a solution by YunjaeChoi (https://github.com/YunjaeChoi/Reinforment-Implementation-on-a-Quadruped). This needs to be adjusted for the usecase and implemented with Gazebo and ROS. This way, the training of this model needs to be done in simulation as it very time-consuming.
 
+![Image of Quadruped Robot]
+(https://github.com/hellocarolin/Reinforcement-Learning-for-Quadruped-Locomotion/quadruped1.jpg)
+
 Videos of the resulting locomotion can be found here:
 - Q-Learning & DQN for Crawlerbot: link1
 - DDPG for Quadruped Robot: link2
