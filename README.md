@@ -1,4 +1,4 @@
-# Reinforcement-Learning-for-Quadruped-Locomotion
+# Reinforcement-Learning-for-Robotic-Locomotion
 In this project Reinforcement Learning is researched and looked into from simpler as well as more complex setups. Q-Learning and Deep Q-Learning are applied to a simple crawlerbot and Deep Deterministic Policy Gradient is applied to a complex Quadruped Robot.
 
 
