@@ -31,6 +31,10 @@ To train the robot and run the trained agent in simulation and the real world on
 <img src="https://github.com/hellocarolin/Reinforcement-Learning-for-Quadruped-Locomotion/blob/master/quadruped1.jpg" width="240"     height="160" title="Quadruped Robot">
 </p>
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/33221803/76149961-81192300-60a5-11ea-8d30-744c681eea23.jpg" width="240"     height="160" title="Quadruped Robot">
+</p>
+
 Videos of the resulting locomotion can be found here:
 - Q-Learning & DQN for Crawlerbot: link1
 - DDPG for Quadruped Robot: link2
