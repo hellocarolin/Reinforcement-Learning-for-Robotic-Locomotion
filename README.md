@@ -5,6 +5,10 @@ In this project Reinforcement Learning is researched and looked into from simple
 ## Building a Quadruped Robot
 A physical quadruped robot has been built by 3D-printing the body parts using an adjusted template of an existig model for a quadruped robot (https://www.thingiverse.com/thing:2204279). The robot is controlled with a Raspberry Pi 3 and 12 MG90 servo motors, with three motors on each leg having a hip joint, an upper leg joint and a lower joint. For controlling the motors the motor controller board PWM9685 is used. For measuring movements of the robot there are two sensors, an ultrasonic sensor HC-SR04 and an Adafruit BNO055 9-DOF absolute orientation sensor.
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/33221803/76149961-81192300-60a5-11ea-8d30-744c681eea23.jpg" width="240"     height="160" title="Quadruped Robot">
+</p>
+
 ## Crawlerbot with Q-Learning and Deep Q-Networks
 
 In the progress of finding a suitable Reinforcement Learning method the quadruped has been transformed to a crawler bot with only two motors being able to perform up to three different movements to achieve a crawling locomotion. For this usecase the Reinforcement Learning methods Q-Learning and Deep Q-Networks have been implemented whereby Q-Learning can outperform the more complex Deep Q-Networks for such a simple setup due to time-consuming tweaking of the hyper-parameters and longer training to approach a perfect locomotion. As the setup f the crawlerbot is quite simple, it can be trained in reality using remote GPIO.
@@ -26,15 +30,6 @@ As the training turned out quite expensive often leading to deadlocks, the noise
 To train the robot and run the trained agent in simulation and the real world one needs the code from YunjaeChoi and apply the changes explained above.
 
 ## Results
-
-<p align="center">
-<img src="https://github.com/hellocarolin/Reinforcement-Learning-for-Quadruped-Locomotion/blob/master/quadruped1.jpg" width="240"     height="160" title="Quadruped Robot">
-</p>
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/33221803/76149961-81192300-60a5-11ea-8d30-744c681eea23.jpg" width="240"     height="160" title="Quadruped Robot">
-</p>
-
 Videos of the resulting locomotion can be found here:
 - Q-Learning & DQN for Crawlerbot: link1
 - DDPG for Quadruped Robot: link2
