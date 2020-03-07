@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/caro/catkin_ws/src/reinforcement/MasterThesis2019/quadruped/src/model/model.ckpt"
+all_model_checkpoint_paths: "/home/caro/catkin_ws/src/reinforcement/MasterThesis2019/quadruped/src/model/model.ckpt"
