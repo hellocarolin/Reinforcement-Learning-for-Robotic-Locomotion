@@ -31,5 +31,5 @@ To train the robot and run the trained agent in simulation and the real world on
 
 ## Results
 Videos of the resulting locomotion can be found here:
-- Q-Learning & DQN for Crawlerbot: link1
-- DDPG for Quadruped Robot: link2
+- Q-Learning & DQN for Crawlerbot: https://www.youtube.com/watch?v=baxubxExp3U&feature=youtu.be
+- DDPG for Quadruped Robot: https://www.youtube.com/watch?v=QC5oQOOmDcY&feature=youtu.be
