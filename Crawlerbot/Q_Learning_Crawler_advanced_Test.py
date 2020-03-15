@@ -16,11 +16,9 @@ if __name__ == '__main__':
     eyes = distance_zero.Eyes()
     q = QLearning_advanced.QLearning_advanced(servos)
 
-    #rewardDF = pd.read_hdf('reward_matrix.h5', 'rewardDF')
+   
     q_matrixDF = pd.read_hdf('q_matrix_advanced_v6.h5', 'q_matrixDF_advanced_v6')
-    #q_matrixDF = pd.read_csv(filepath_or_buffer='/Users/caro/Uni/Master_Thesis_2019/gitMaster/MasterThesis2019/src/q_matrix_advanced.csv', sep=",")
-    #q_matrixDF = pd.DataFrame(q_matrixDF)
-    #q_matrixDF.to_hdf('q_matrix_advanced_original.h5', key='q_matrixDF_advanced_original', mode='w')
+  
     leg = 1
 
     randomStartingState = q_matrixDF.sample(n=1)
@@ -49,4 +47,4 @@ if __name__ == '__main__':
         state = nextStateRow #set new state as current state
 
         print("next state set!")
-        time.sleep(5)
+        time.sleep(1)
