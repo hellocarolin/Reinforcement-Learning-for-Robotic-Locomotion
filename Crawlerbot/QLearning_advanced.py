@@ -29,23 +29,15 @@ class QLearning_advanced:
             if self.statesWithLastState[i][0][0] == self.statesWithLastState[i][1][0] or self.statesWithLastState[i][0][1] == self.statesWithLastState[i][1][1]:
                 self.possibleStates.append(self.statesWithLastState[i])
 
-        # removing impossible states from q matrix
+        # removing impossible states from q matrix -> 45 possible states left
         self.q_matrix = np.zeros((45,6))
         self.q_matrixDF = pd.DataFrame(self.q_matrix, columns=self.actions, index=self.possibleStates)
-
-
-
-        # Set value for the discount factor gamma: how much importance is given to future rewards
-        # v3 with gamma=0.8 and alpha=0.2, decay 0.9
-        # v2 with gamma = 0.9 and alpha 0.1, decay 0.9
-        # original/ v4/v5 gamma =0.8 and alpha 0.65 (epsilon decay 0.9/ 0.95)
-        # v6 alpha=0.5, forward movement but including backwards 
-        # v7 like v2 but decay 0.95
         
-        self.gamma = 0.9 #0.8
+        # discount rate
+        self.gamma = 0.9
 
         # learning rate
-        self.alpha = 0.1 #0.65 #0.2 #0.1 
+        self.alpha = 0.1
 
         # decides if Q-value is used todetermine the action or take a random sample of the action space
         self.epsilon = 1.0
