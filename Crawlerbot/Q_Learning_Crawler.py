@@ -30,11 +30,12 @@ if __name__ == '__main__':
     for i in range(episodes):
         totalReward = 0
         print(f"episode number: {i}")
-
+         
+        # get random starting state
         randomStartingState = q.rewardDF.sample(n=1)
         startingState = randomStartingState
 
-        # set random starting state
+        # perform random starting state
         q.setStartingState(startingState, leg)
 
         for step in range(maxSteps):
@@ -53,10 +54,7 @@ if __name__ == '__main__':
             else:
                 action = q.getValidRandomAction(startingState)
                 print(f"valid random action: {action}")
-
-            #validRandomAction = q.getValidRandomAction(startingState) # get valid random actions from state
-            #q.doAction(validRandomAction, leg) # execute action with servos
-
+                
             q.doAction(action, leg)
 
             time.sleep(1)
@@ -67,23 +65,16 @@ if __name__ == '__main__':
             reward = q.getDistanceReward(startingDistance, newDistance) # get reward
 
             print(f"reward: {reward}")
-
-            print(q.rewardDF.loc[currentState][action])
-            #q.rewardDF.loc[validRandomAction.index.values[0]][validRandomAction.columns.values[0]] = reward # put reward in reward table
-            q.rewardDF.loc[currentState][action] = reward # put reward in reward table
-
-
-            print(f"reward table: \n {q.rewardDF}")
             
-            #actionHappened = validRandomAction.columns.values[0] # get label of action just executed
+            # put reward in reward table
+            q.rewardDF.loc[currentState][action] = reward 
+            
             actionHappened = action
             nextState = q.getNextState(currentState, actionHappened)
             print(f"nextState: \n {nextState}")
             nextStateRow = q.q_matrixDF.loc[[nextState],:]
             print(f"nextStateRow: \n {nextStateRow}")
     
-
-
             # update q matrix: Q_new(s_t, a_t) = (1-alpha)*Q(s_t, a_t)+ alpha*(reward+gamma*max(Q(s_t+1, a_t))
             
             qNew = q.q_matrixDF.loc[currentState, actionHappened]
